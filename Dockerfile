@@ -8,7 +8,7 @@ ADD Pipfile ./
 ADD Pipfile.lock ./
 
 RUN apk add --no-cache --virtual build-dependencies build-base && \
-    pipenv install --deploy --system --verbose && \
+    pipenv install --deploy --system --verbose --skip-lock && \
     apk del build-dependencies
 
 ENV LISTEN_PORT 80
