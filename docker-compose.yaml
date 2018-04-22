@@ -1,0 +1,32 @@
+version: '3.4'
+
+services:
+  redis:
+    image: redis:3.2.11
+    healthcheck:
+      test: ["CMD", "redis-cli", "PING"]
+
+  app:
+    build: .
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/status"]
+      start_period: 2s
+      retries: 3
+      timeout: 1s
+      interval: 5s
+    environment:
+      REDIS_CONNECT: redis://redis
+      CACHE_CAPACITY: 100
+      CACHE_TTL: 1h
+    depends_on:
+      - redis
+    ports:
+      - 80
+
+  tests:
+    build: .
+    environment:
+      REDIS_CONNECT: redis://redis
+    depends_on:
+      - redis
+    command: ["pytest", "--cov=.", "./tests", "."]
