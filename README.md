@@ -90,11 +90,11 @@ Integration tests are relying on `docker-compose` to spin up Redis instance.
 
 | Part           | Time Spent  |
 | -------------- |------------ |
-| Infrastructure | 30m         |
+| Infrastructure | 40m         |
 | HTTP API       | 45m         |
 | Redis API      | 45m         |
 | Cache          | 40m         |
-| Documentation  | 20m         |
+| Documentation  | 30m         |
 
 Time spent includes time for design decisions and unit tests.
 
