@@ -9,4 +9,7 @@ MAX_CONCURRENCY = int(os.getenv('MAX_CONCURRENCY', 1))
 CACHE_CAPACITY = int(os.environ['CACHE_CAPACITY'])
 CACHE_TTL = parse(os.environ['CACHE_TTL'])
 
+REDIS_SERVER_LISTEN_PORT = int(os.getenv('REDIS_SERVER_LISTEN_PORT', 6379))
+REDIS_SERVER_TIMEOUT = parse(os.getenv('REDIS_SERVER_TIMEOUT', '1s'))
+
 assert CACHE_CAPACITY >= 1, "Cache capacity should be at least 1."

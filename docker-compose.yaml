@@ -22,6 +22,7 @@ services:
       - redis
     ports:
       - 80
+      - 6379
 
   tests:
     build: .
