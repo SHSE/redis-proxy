@@ -48,8 +48,6 @@ and binary keys as base64 encoded strings (`b=1` query parameter must be set):
 GET /values/&lt;base64_encoded_binary_key&gt;?b=1
 ```
 
-
-
 ## Cache
 
 LRU cache with global expiration.
