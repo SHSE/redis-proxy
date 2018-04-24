@@ -50,13 +50,13 @@ The proxy exposes HTTP Restful API for getting values.
 It supports both string keys:
 
 ```text
-GET /values/&lt;string_key&gt;
+GET /values/<string_key>;
 ```
 
 and binary keys as base64 encoded strings (`b=1` query parameter must be set):
 
 ```text
-GET /values/&lt;base64_encoded_binary_key&gt;?b=1
+GET /values/<base64_encoded_binary_key>?b=1
 ```
 
 ## Cache
