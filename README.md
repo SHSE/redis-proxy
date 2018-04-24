@@ -85,19 +85,6 @@ The test suite has both integration and unit tests.
 
 Integration tests are relying on `docker-compose` to spin up Redis instance.
 
-
-## Log Work
-
-| Part           | Time Spent  |
-| -------------- |------------ |
-| Infrastructure | 40m         |
-| HTTP API       | 45m         |
-| Redis API      | 45m         |
-| Cache          | 40m         |
-| Documentation  | 30m         |
-
-Time spent includes time for design decisions and unit tests.
-
 ## TODO
 
 - [ ] Prometheus metrics endpoint
